@@ -1,0 +1,52 @@
+\documentclass[oneside, a4paper, 12pt, openany]{book}
+
+%% подключаем стандарт библиографии
+\bibliographystyle{ugost2008} 
+
+%% for envirovemt "abstract" in class book
+\newenvironment{abstract}{}{}
+\usepackage{abstract}
+
+
+
+
+%\usepackage[draft]{graphicx} 
+
+
+%% подключаем преамбулу, в ней содержатся подключение всех необходимых пакетов
+\input{include/preambule.tex}
+\input{include/defines.tex}
+
+\begin{document}
+
+
+    %% титульник
+    \input{parts/title.tex}
+    %% аннотоция
+    \input{parts/Annotation.tex}
+    %содержание
+    \fontsize{14pt}{16pt}\selectfont
+    \tableofcontents{}
+    \newpage
+    
+	
+	\fontsize{14pt}{16pt}\selectfont
+    \input{parts/introduction.tex} %% Введение
+    
+
+    
+    \fontsize{14pt}{16pt}\selectfont
+    \input{parts/chapter2.tex}
+    
+
+    
+
+
+    %% Don't change the following lines
+    \nocite{*}
+    \bibliography{references}
+
+    %% в зависимости от надобности подключаем раздел "Приложениие"
+    \newpage
+    \input{parts/Appendix.tex}
+\end{document}

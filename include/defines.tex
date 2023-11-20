@@ -1,0 +1,160 @@
+%% Новые функции
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+\DeclareMathOperator{\M}{\mathop{mod}}
+\DeclareMathOperator{\cont}{\mathop{cont}}
+\DeclareMathOperator{\dist}{\mathop{dist}}
+\DeclareMathOperator{\supp}{\mathop{supp}}
+\DeclareMathOperator{\argmax}{\mathop{argmax}}
+\DeclareMathOperator{\argmin}{\mathop{argmin}}
+\DeclareMathOperator{\sinc}{\mathop{sinc}}
+\DeclareMathOperator{\CF}{\mathop{CF}}
+
+%% изменения начертания
+\newcommand{\tit}[1]{%
+\textit{#1}%
+}
+
+\newcommand{\tbf}[1]{%
+\textbf{#1}%
+}
+
+%%разные скобки
+\newcommand{\br}[1]{%
+\left( #1 \right)%
+}
+
+\newcommand{\sqrbr}[1]{%
+\left[ #1 \right]%
+}
+
+\newcommand{\figbr}[1]{%
+\left\{ #1 \right\}%
+}
+
+\newcommand{\pair}[2]{%
+\left( #1 , #2 \right)
+}
+
+\newcommand{\av}[1]{%
+\left \langle #1 \right \rangle%
+}
+
+\newcommand{\wpart}[1]{%
+\left \lfloor #1 \right \rfloor%
+}
+
+
+%%модификация одного объекта
+\newcommand{\wt}[1]{%
+\widetilde{ #1 }%
+}
+
+\newcommand{\rev}[1]{%
+\frac{1}{#1}%
+}
+
+\newcommand{\domdef}[1]{%
+\mathscr{D} \br{#1}%
+}
+
+\newcommand{\PD}[2]{%
+\frac{\partial #1 }{\partial #2 }%
+}
+
+\newcommand{\MR}[1]{%
+\mathring{#1}%
+}
+
+%% стандратные преобразования
+\newcommand{\FT}[1]{%
+\mathcal{F} \sqrbr{#1}%
+}
+
+\newcommand{\EXTFT}[3]{%
+\mathcal{F}_{ #2 \to #3 } \sqrbr{#1}%
+}
+
+\newcommand{\IFT}[1]{%
+\mathcal{F}^{-1} \sqrbr{#1}%
+}
+
+\newcommand{\EXTIFT}[3]{%
+\mathcal{F}_{ #2 \to #3 }^{-1} \sqrbr{#1}%
+}
+
+\newcommand{\LT}[1]{%
+\mathcal{L} \sqrbr{#1}%
+}
+
+\newcommand{\EXTLT}[3]{%
+\mathcal{L}_{ #2 \to #3 } \sqrbr{#1}%
+}
+
+\newcommand{\ILT}[1]{%
+\mathcal{L}^{-1} \sqrbr{#1}%
+}
+
+\newcommand{\EXTILT}[3]{%
+\mathcal{L}_{ #2 \to #3 }^{-1} \sqrbr{#1}%
+}
+
+
+
+\newcommand{\scal }[2]{%
+\left< #1 , #2 \right>%
+}
+
+\newcommand{\trans}[1]{%
+#1^{\mathrm{T}}%
+}
+
+
+
+%% стандартные множества
+\def\RR{\mathbb{R}}
+\def\QQ{\mathbb{Q}}
+\def\ZZ{\mathbb{Z}}
+\def\NN{\mathbb{N}}
+\def\FF{\mathbb{F}}
+\def\CC{\mathbb{C}}
+\def\Zp{\mathbb{N}_0}
+\def\Tau{\mathcal{T}}
+\def\DD{\mathcal{D}}
+
+%%стрелки
+\let\Rar\Rightarrow
+\let\rar\rightarrow
+\let\LRar\Leftrightarrow
+\let\hkra\hookrightarrow
+\let\drar\dashrightarrow
+
+%%логика и знаки порядка
+\let\lor\vee
+\let\land\wedge
+
+\let\leq\leqslant  
+\let\geq\geqslant
+
+
+\let\INF\infty
+
+\let\degree\circ
+
+
+%%греческие буквы
+\let\eps\varepsilon
+\let\al\alpha
+\let\be\beta
+\let\phi\varphi
+\let\Om\Omega
+\let\om\omega
+\let\lam\lambda
+\let\Lam\Lambda
+\let\Th\Theta
+\let\th\theta
+\let\D\Delta
+\let\d\delta
+\let\g\gamma
+\let\G\Gamma  
+\let\XOR\oplus
+\let\t\tau

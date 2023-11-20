@@ -1,0 +1,126 @@
+%%% Работа с русским языком
+\usepackage{cmap}			 % поиск в PDF
+\usepackage{mathtext} 		 % русские буквы в формулах
+\usepackage[T2A]{fontenc}	 % кодировка
+\usepackage[utf8]{inputenc}	 % кодировка исходного текста
+\usepackage[russian]{babel}	 % локализация и переносы
+
+%%% Пакеты для работы с математикой
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, physics}
+\usepackage{icomma}
+
+
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+%\usepackage{leqno}               % Немуреация формул слева
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs}    % Красивый матшрифт
+
+%% Поля 
+\usepackage[left=30mm,right=15mm,top=20mm,bottom=20mm,bindingoffset=0cm]{geometry}
+
+%% Русские списки
+\usepackage{enumitem}
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%%% Работа с картинками
+\usepackage{caption}
+\captionsetup{justification=centering} % центрирование подписей к картинкам
+\usepackage{graphicx}                  % Для вставки рисунков
+\graphicspath{{images/}{images2/}}     % папки с картинками
+\setlength\fboxsep{3pt}                % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt}               % Толщина линий рамки \fbox{}
+\usepackage{wrapfig}                   % Обтекание рисунков и таблиц текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}                        % Длинные таблицы
+\usepackage{multirow}                         % Слияние строк в таблице
+
+%% Красная строка
+\setlength{\parindent}{1.25cm}
+
+%% Интервалы
+%\linespread{1}
+%\usepackage{multirow}
+
+\usepackage{setspace}
+%\полуторный интервал
+\onehalfspacing
+
+%% TikZ
+\usepackage{tikz}
+\usetikzlibrary{graphs,graphs.standard}
+
+%% Верхний колонтитул
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+%% дополнения
+\usepackage{float}   % Добавляет возможность работы с командой [H] которая улучшает расположение на странице
+\usepackage{gensymb} % Красивые градусы
+\usepackage{caption} % Пакет для подписей к рисункам, в частности, для работы caption*
+
+% подключаем hyperref (для ссылок внутри  pdf)
+\usepackage[unicode, pdftex]{hyperref}
+
+%% быстрое оформление
+\theoremstyle{plain} % стиль по умолчанию
+\newtheorem{lemma}[section]{Лемма}
+
+%% алгоритмы
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\makeatletter
+\algblock[ALGORITHMBLOCK]{BeginAlgorithm}{EndAlgorithm}
+\algblock[BLOCK]{BeginBlock}{EndBlock}
+\makeatother
+
+% Нумерация блоков
+\usepackage{caption}% http://ctan.org/pkg/caption
+\captionsetup[ruled]{labelsep=period}
+\makeatletter
+\@addtoreset{algorithm}{chapter}% algorithm counter resets every chapter
+\makeatother
+\renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}% Algorithm # is <chapter>.<algorithm>
+
+ \renewcommand{\listalgorithmname}{Список алгоритмов}
+ \floatname{algorithm}{Алгоритм}
+
+  % Перевод команд псевдокода
+  \algrenewcommand\algorithmicwhile{\textbf{До тех пока}}
+  \algrenewcommand\algorithmicdo{\textbf{выполнять}}
+  \algrenewcommand\algorithmicrepeat{\textbf{Повторять}}
+  \algrenewcommand\algorithmicuntil{\textbf{Пока выполняется}}
+  \algrenewcommand\algorithmicend{\textbf{Конец}}
+  \algrenewcommand\algorithmicif{\textbf{Если}}
+  \algrenewcommand\algorithmicelse{\textbf{иначе}}
+  \algrenewcommand\algorithmicthen{\textbf{тогда}}
+  \algrenewcommand\algorithmicfor{\textbf{Цикл}}
+  \algrenewcommand\algorithmicforall{\textbf{Выполнить для всех}}
+  \algrenewcommand\algorithmicfunction{\textbf{Функция}}
+  \algrenewcommand\algorithmicprocedure{\textbf{Процедура}}
+  \algrenewcommand\algorithmicloop{\textbf{Зациклить}}
+  \algrenewcommand\algorithmicrequire{\textbf{Условия:}}
+  \algrenewcommand\algorithmicensure{\textbf{Обеспечивающие условия:}}
+  \algrenewcommand\algorithmicreturn{\textbf{Возвратить}}
+  \algrenewtext{EndWhile}{\textbf{Конец цикла}}
+  \algrenewtext{EndLoop}{\textbf{Конец зацикливания}}
+  \algrenewtext{EndFor}{\textbf{Конец цикла}}
+  \algrenewtext{EndFunction}{\textbf{Конец функции}}
+  \algrenewtext{EndProcedure}{\textbf{Конец процедуры}}
+  \algrenewtext{EndIf}{\textbf{Конец условия}}
+  \algrenewtext{EndFor}{\textbf{Конец цикла}}
+  \algrenewtext{BeginAlgorithm}{\textbf{Начало алгоритма}}
+  \algrenewtext{EndAlgorithm}{\textbf{Конец алгоритма}}
+  \algrenewtext{BeginBlock}{\textbf{Начало блока. }}
+  \algrenewtext{EndBlock}{\textbf{Конец блока}}
+  \algrenewtext{ElsIf}{\textbf{иначе если }}
